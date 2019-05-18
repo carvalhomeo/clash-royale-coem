@@ -13,6 +13,7 @@ import { CardsComponent } from './header/navbar/cards/cards.component';
 import { ChestsComponent } from './header/navbar/chests/chests.component';
 import { PlayersComponent } from './header/navbar/players/players.component';
 import { LeaguesComponent } from './header/navbar/leagues/leagues.component';
+import { ArenaDetailsComponent } from './header/navbar/arenas/arena-details/arena-details.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { LeaguesComponent } from './header/navbar/leagues/leagues.component';
     CardsComponent,
     ChestsComponent,
     PlayersComponent,
-    LeaguesComponent
+    LeaguesComponent,
+    ArenaDetailsComponent
   ],
   imports: [
     BrowserModule,
