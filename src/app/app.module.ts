@@ -14,6 +14,10 @@ import { ChestsComponent } from './header/navbar/chests/chests.component';
 import { PlayersComponent } from './header/navbar/players/players.component';
 import { LeaguesComponent } from './header/navbar/leagues/leagues.component';
 import { ArenaDetailsComponent } from './header/navbar/arenas/arena-details/arena-details.component';
+import { CardsDetailsComponent } from './header/navbar/cards/cards-details/cards-details.component';
+import { ChestsDetailsComponent } from './header/navbar/chests/chests-details/chests-details.component';
+import { LeaguesDetailsComponent } from './header/navbar/leagues/leagues-details/leagues-details.component';
+import { PlayersDetailsComponent } from './header/navbar/players/players-details/players-details.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ArenaDetailsComponent } from './header/navbar/arenas/arena-details/aren
     ChestsComponent,
     PlayersComponent,
     LeaguesComponent,
-    ArenaDetailsComponent
+    ArenaDetailsComponent,
+    CardsDetailsComponent,
+    ChestsDetailsComponent,
+    LeaguesDetailsComponent,
+    PlayersDetailsComponent
   ],
   imports: [
     BrowserModule,

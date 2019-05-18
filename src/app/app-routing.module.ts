@@ -7,14 +7,34 @@ import { CardsComponent } from './header/navbar/cards/cards.component';
 import { ChestsComponent } from './header/navbar/chests/chests.component';
 import { PlayersComponent } from './header/navbar/players/players.component';
 import { LeaguesComponent } from './header/navbar/leagues/leagues.component';
+import { ArenaDetailsComponent } from './header/navbar/arenas/arena-details/arena-details.component';
+import { CardsDetailsComponent } from './header/navbar/cards/cards-details/cards-details.component';
+import { ChestsDetailsComponent } from './header/navbar/chests/chests-details/chests-details.component';
+import { PlayersDetailsComponent } from './header/navbar/players/players-details/players-details.component';
+import { LeaguesDetailsComponent } from './header/navbar/leagues/leagues-details/leagues-details.component';
 
 const routes: Routes = [
 {path: '', component: HomeComponent},
-{path: 'arenas', component: ArenasComponent},
-{path: 'cards', component: CardsComponent},
-{path: 'chests', component: ChestsComponent},
-{path: 'players', component: PlayersComponent},
-{path: 'leagues', component: LeaguesComponent},
+{path: 'arenas', children: [
+  {path: '', component: ArenasComponent},
+  {path: ':id', component: ArenaDetailsComponent}
+]},
+{path: 'cards', children: [
+  {path: '', component: CardsComponent},
+  {path: ':id', component: CardsDetailsComponent}
+]},
+{path: 'chests', children: [
+  {path: '', component: ChestsComponent},
+  {path: ':id', component: ChestsDetailsComponent}
+]},
+{path: 'players', children: [
+  {path: '', component: PlayersComponent},
+  {path: ':id', component: PlayersDetailsComponent}
+]},
+{path: 'leagues', children: [
+  {path: '', component: LeaguesComponent},
+  {path: ':id', component: LeaguesDetailsComponent}
+]},
 {path: '**', component: FourZeroFourComponent}
 ];
 
