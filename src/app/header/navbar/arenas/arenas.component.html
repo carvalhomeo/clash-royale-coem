@@ -1,6 +1,6 @@
-<div class="arenas">
-  <a routerLink="/arenas/5b09953aab411c001423ed3f" routerLinkActive="active">
-    <img class="arenas-img" src="http://www.clashapi.xyz/images/arenas/training-camp.png">
+<div class="arenas" *ngFor='let arena of arenas$'>
+  <a [routerLink]="['/arenas',arena._id]" routerLinkActive="active">
+    <img class="arenas-img" src="http://www.clashapi.xyz/images/arenas/{{arena.idName}}.png">
   </a>
-  Training Camp
+  {{arena.name}}
 </div>

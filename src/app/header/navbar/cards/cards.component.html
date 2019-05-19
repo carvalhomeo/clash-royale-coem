@@ -1,3 +1,6 @@
-<p>
-  cards works!
-</p>
+<div class="cards" *ngFor='let card of cards$'>
+    <a [routerLink]="['/cards',card._id]" routerLinkActive="active">
+      <img class="cards-img" src="http://www.clashapi.xyz/images/cards/{{card.idName}}.png">
+    </a>
+    {{card.name}}
+  </div>

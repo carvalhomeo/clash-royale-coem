@@ -18,6 +18,8 @@ import { CardsDetailsComponent } from './header/navbar/cards/cards-details/cards
 import { ChestsDetailsComponent } from './header/navbar/chests/chests-details/chests-details.component';
 import { LeaguesDetailsComponent } from './header/navbar/leagues/leagues-details/leagues-details.component';
 import { PlayersDetailsComponent } from './header/navbar/players/players-details/players-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './data/data.service';
 
 @NgModule({
   declarations: [
@@ -40,9 +42,10 @@ import { PlayersDetailsComponent } from './header/navbar/players/players-details
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

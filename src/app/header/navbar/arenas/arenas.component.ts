@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Arena } from 'src/app/model/arena';
+import { DataService } from 'src/app/data/data.service';
 
 @Component({
   selector: 'app-arenas',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./arenas.component.css']
 })
 export class ArenasComponent implements OnInit {
+  arenas$: Arena[];
 
-  constructor() { }
+  constructor(private dataService: DataService) { }
 
   ngOnInit() {
+    return this.dataService.getAllArenas()
+    .subscribe(data => this.arenas$ = data)
   }
 
 }
