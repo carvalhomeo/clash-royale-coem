@@ -1,6 +1,6 @@
 <div class="chests" *ngFor='let chest of chests$'>
     <a [routerLink]="['/chests',chest._id]" routerLinkActive="active">
-      <img class="chests-img" src="http://www.clashapi.xyz/images/chests/{{chest.idName}}.png">
+      <img class="chests-img" src="http://www.clashapi.xyz/images/chests/{{chest.idName.substr()}}.png">
     </a>
     {{chest.name}}
   </div>
